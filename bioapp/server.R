@@ -9,6 +9,10 @@ shinyServer(function(input, output){
       "PNP" = odczyt,
       "RNR" = odczyt2)
   })
+  output$row<- renderPrint({
+    liczba<- dataInput()
+    nrow(liczba)
+  })
   output$dane <-renderTable(
-    {head(dataInput(), n=10)})
+    {head(dataInput(), n=input$obs)})
 })
