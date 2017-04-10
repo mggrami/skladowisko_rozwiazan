@@ -15,7 +15,8 @@ shinyUI(fluidPage(
     h2("Dane"),
     tableOutput("dane"),
     h5("Liczba genów"),
-    verbatimTextOutput("row")
+    verbatimTextOutput("row"),
+    plotOutput("plot1")
   )
   )
 ))

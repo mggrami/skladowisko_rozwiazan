@@ -15,4 +15,8 @@ shinyServer(function(input, output){
   })
   output$dane <-renderTable(
     {head(dataInput(), n=input$obs)})
+  
+  output$plot1 <- renderPlot({
+    plot(dataInput()$Name, dataInput()$log2.fold.change, type="h")
+  })
 })
