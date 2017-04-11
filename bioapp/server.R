@@ -1,4 +1,5 @@
 library(shiny)
+library(ggplot2)
 odczyt<- read.csv("data/1_VS_2_16_USUNIETE_ODCZYTY_R.csv", header= TRUE, sep="\t")
 odczyt2<- read.csv("data/1_VS_3_47_USUNIETE_ODCZYTY_R.csv", header = TRUE, sep="\t")
 
@@ -17,6 +18,6 @@ shinyServer(function(input, output){
     {head(dataInput(), n=input$obs)})
   
   output$plot1 <- renderPlot({
-    plot(dataInput()$Name, dataInput()$log2.fold.change, type="h")
+    ggplot(dataInput(), aes(x=Name, y=log2.fold.change))+ geom_point()
   })
 })
