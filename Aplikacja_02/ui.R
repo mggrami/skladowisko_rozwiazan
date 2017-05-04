@@ -13,9 +13,8 @@ shinyUI(fluidPage(
     
     dataTableOutput("dane2"),
     
-    plotlyOutput("wizual"),
+    plotlyOutput("wizual")
     
-    dataTableOutput("izolacja")
   )
 )
 ))

@@ -15,4 +15,3 @@ odczyt1%>%
   odczyt1
 
 write.table(odczyt1, "~/Dokumenty/SHINY/Aplikacja_02/data/1_VS_3_47_USUNIETE_ODCZYTY_R.csv", row.names = FALSE, col.names = TRUE, sep = "\t")
-

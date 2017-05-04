@@ -27,5 +27,4 @@ shinyServer(function(input, output){
      wykres %>% add_histogram2d()
    )
   })
-output$izolacja <-isolate(odczyt)
 })
