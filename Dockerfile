@@ -2,8 +2,8 @@ FROM openanalytics/r-base
 
 RUN R -e "install.packages(c('shiny', 'DT', 'ggplot2', 'plotly'), repos='https://cloud.r-project.org/')"
 
-RUN mkdir /root/aplikacja_02
-COPY aplikacja_02 /root/aplikacja_02
+RUN mkdir /root/Aplikacja_02
+COPY Aplikacja_02 /root/Aplikacja_02
 
 COPY Rprofile.site /usr/lib/R/etc/
 
